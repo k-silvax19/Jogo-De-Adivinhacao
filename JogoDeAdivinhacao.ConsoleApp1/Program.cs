@@ -24,7 +24,6 @@ while (deveContinuar == true)
     Console.WriteLine("-----------------------------------");
     Console.WriteLine("Parabens Você Acertou!!");
     Console.WriteLine("-----------------------------------");
-
     }
 
  else if (numeroDigitado > numeroAleatorio)
@@ -39,7 +38,6 @@ while (deveContinuar == true)
         Console.WriteLine("-----------------------------------");
         Console.WriteLine("O número e menor que o número secreto");
         Console.WriteLine("-----------------------------------");
-
     }
     
     Console.Write("Deseja Continuar s/N ");
