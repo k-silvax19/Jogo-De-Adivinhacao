@@ -12,3 +12,4 @@ C:\Users\kauan\Desktop\Jogo De Adivinhacao\JogoDeAdivinhacao.ConsoleApp1\obj\Deb
 C:\Users\kauan\Desktop\Jogo De Adivinhacao\JogoDeAdivinhacao.ConsoleApp1\obj\Debug\net10.0\JogoDeAdivinhacao.ConsoleApp1.pdb
 C:\Users\kauan\Desktop\Jogo De Adivinhacao\JogoDeAdivinhacao.ConsoleApp1\obj\Debug\net10.0\JogoDeAdivinhacao.ConsoleApp1.genruntimeconfig.cache
 C:\Users\kauan\Desktop\Jogo De Adivinhacao\JogoDeAdivinhacao.ConsoleApp1\obj\Debug\net10.0\ref\JogoDeAdivinhacao.ConsoleApp1.dll
+C:\Users\kauan\Desktop\Jogo De Adivinhacao\JogoDeAdivinhacao.ConsoleApp1\obj\Debug\net10.0\JogoDeAdivinhacao.ConsoleApp1.sourcelink.json
