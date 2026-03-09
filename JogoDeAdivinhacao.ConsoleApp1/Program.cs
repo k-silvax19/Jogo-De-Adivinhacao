@@ -2,9 +2,7 @@
 
 using System.Security.Cryptography;
 
-bool deveContinuar = true;
-
-while (deveContinuar == true)
+while (true == true)
 {
  Console.Clear();
 
@@ -43,7 +41,7 @@ while (deveContinuar == true)
     Console.Write("Deseja Continuar s/N ");
     string? opcaoContinuar = Console.ReadLine();
     
-    if (opcaoContinuar?.ToUpper() != "s")
+    if (opcaoContinuar?.ToUpper() != "S")
     {
         break;
     }
