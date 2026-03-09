@@ -1,0 +1,14 @@
+C:\Users\kauan\Desktop\Jogo De Adivinhacao\JogoDeAdivinhacao.ConsoleApp1\bin\Debug\net10.0\JogoDeAdivinhacao.ConsoleApp1.exe
+C:\Users\kauan\Desktop\Jogo De Adivinhacao\JogoDeAdivinhacao.ConsoleApp1\bin\Debug\net10.0\JogoDeAdivinhacao.ConsoleApp1.deps.json
+C:\Users\kauan\Desktop\Jogo De Adivinhacao\JogoDeAdivinhacao.ConsoleApp1\bin\Debug\net10.0\JogoDeAdivinhacao.ConsoleApp1.runtimeconfig.json
+C:\Users\kauan\Desktop\Jogo De Adivinhacao\JogoDeAdivinhacao.ConsoleApp1\bin\Debug\net10.0\JogoDeAdivinhacao.ConsoleApp1.dll
+C:\Users\kauan\Desktop\Jogo De Adivinhacao\JogoDeAdivinhacao.ConsoleApp1\bin\Debug\net10.0\JogoDeAdivinhacao.ConsoleApp1.pdb
+C:\Users\kauan\Desktop\Jogo De Adivinhacao\JogoDeAdivinhacao.ConsoleApp1\obj\Debug\net10.0\JogoDeAdivinhacao.ConsoleApp1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kauan\Desktop\Jogo De Adivinhacao\JogoDeAdivinhacao.ConsoleApp1\obj\Debug\net10.0\JogoDeAdivinhacao.ConsoleApp1.AssemblyInfoInputs.cache
+C:\Users\kauan\Desktop\Jogo De Adivinhacao\JogoDeAdivinhacao.ConsoleApp1\obj\Debug\net10.0\JogoDeAdivinhacao.ConsoleApp1.AssemblyInfo.cs
+C:\Users\kauan\Desktop\Jogo De Adivinhacao\JogoDeAdivinhacao.ConsoleApp1\obj\Debug\net10.0\JogoDeAdivinhacao.ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Users\kauan\Desktop\Jogo De Adivinhacao\JogoDeAdivinhacao.ConsoleApp1\obj\Debug\net10.0\JogoDeAdivinhacao.ConsoleApp1.dll
+C:\Users\kauan\Desktop\Jogo De Adivinhacao\JogoDeAdivinhacao.ConsoleApp1\obj\Debug\net10.0\refint\JogoDeAdivinhacao.ConsoleApp1.dll
+C:\Users\kauan\Desktop\Jogo De Adivinhacao\JogoDeAdivinhacao.ConsoleApp1\obj\Debug\net10.0\JogoDeAdivinhacao.ConsoleApp1.pdb
+C:\Users\kauan\Desktop\Jogo De Adivinhacao\JogoDeAdivinhacao.ConsoleApp1\obj\Debug\net10.0\JogoDeAdivinhacao.ConsoleApp1.genruntimeconfig.cache
+C:\Users\kauan\Desktop\Jogo De Adivinhacao\JogoDeAdivinhacao.ConsoleApp1\obj\Debug\net10.0\ref\JogoDeAdivinhacao.ConsoleApp1.dll
