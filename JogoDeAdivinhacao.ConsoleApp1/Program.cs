@@ -1,9 +1,11 @@
-﻿using System;
-
-using System.Security.Cryptography;
+﻿using System.Security.Cryptography;
 
 while (true == true)
 {
+    int[] numerosDigitados = new int[100];
+    int contadorNumerosDigitados = 0;
+    int pontuacao = 1000;
+
  Console.Clear();
 
  Console.WriteLine("-----------------------------------");
@@ -30,16 +32,19 @@ while (true == true)
             break;
 
         case "2":
-        numeroMaximo = 50;
-        tentativasMaximas = 5;
-        break;
+            numeroMaximo = 50;
+            tentativasMaximas = 5;
+            break;
 
         case "3":
-        numeroMaximo = 100;
-        tentativasMaximas = 3;
-        break;
+            numeroMaximo = 100;
+            tentativasMaximas = 3;
+            break;
 
         default:
+            Console.WriteLine("-------------------------------");
+            Console.WriteLine("selecione uma dificuldade valida");
+            Console.WriteLine("aperte ENTER para continuar...");
             numeroMaximo = 20;
             tentativasMaximas = 10;
             break;
@@ -58,6 +63,37 @@ while (true == true)
         string? chute = Console.ReadLine();
 
         int numeroDigitado = Convert.ToInt32(chute);
+
+        bool numeroEstaRepetido = false;
+
+        for (int contadorNumeros = 0; contadorNumeros < contadorNumerosDigitados; contadorNumeros++)
+        {
+            if (numerosDigitados[contadorNumeros] == numeroDigitado)
+            {
+                numeroEstaRepetido = true;
+                break;
+            }
+        }
+        
+        if (numeroEstaRepetido == true)
+        {
+            Console.WriteLine("-------------------------------");
+            Console.WriteLine("voce ja digitou esse numero, tente novamente");
+            Console.WriteLine("--------------------------------");
+            Console.WriteLine("digite ENTER para continuar...");
+            Console.ReadLine();
+
+            tentativa--;
+
+            continue;
+
+        }
+         if (contadorNumerosDigitados < numerosDigitados.Length)
+        {
+            numerosDigitados[contadorNumerosDigitados] = numeroDigitado;
+
+            contadorNumerosDigitados++;
+        }
 
         if (numeroDigitado == numeroAleatorio)
         {
@@ -79,6 +115,27 @@ while (true == true)
             Console.WriteLine("O número digitado foi menor que o número secreto!");
             Console.WriteLine("------------------------------------");
         }
+
+        int diferencaNumerica = Math.Abs(numeroAleatorio - numeroDigitado);
+
+        if (diferencaNumerica >= 10)
+        {
+            pontuacao -= 100;
+        }
+        else if (diferencaNumerica >= 5)
+        {
+            pontuacao -= 50;
+        }
+        else
+        {
+            pontuacao -= 20;
+        }
+
+        Console.WriteLine("Sua pontuação é: " + pontuacao);
+        Console.WriteLine("------------------------------------");
+        Console.Write("Digite ENTER para continuar...");
+        Console.ReadLine();
+
 
         if (tentativa == tentativasMaximas)
         {
