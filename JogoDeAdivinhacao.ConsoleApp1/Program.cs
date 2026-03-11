@@ -106,7 +106,90 @@ class Program
             Console.Write($"Digite um número entre 1 e {numeroMaximo}: ");
             string? chute = Console.ReadLine();
 
+            int numeroDigitado = Convert.ToInt32(chute);
 
+            bool numeroEstaRepetido = false;
+
+            for (int contadorNumeros = 0; contadorNumeros < contadorNumerosDigitados; contadorNumeros++)
+            {
+                if (numerosDigitados[contadorNumeros] == numeroDigitado)
+                {
+                    numeroEstaRepetido = true;
+                    break;
+                }
+            }
+
+            if (numeroEstaRepetido == true)
+            {
+                Console.WriteLine("-------------------------------");
+                Console.WriteLine("voce ja digitou esse numero, tente novamente");
+                Console.WriteLine("--------------------------------");
+                Console.WriteLine("digite ENTER para continuar...");
+                Console.ReadLine();
+
+                tentativa--;
+
+                continue;
+            }
+            if (numeroDigitado >= numeroMaximo)
+            {
+                Console.WriteLine("-------------------------------");
+                Console.WriteLine("Esse numero e maior que o numero maximo permitido! ");
+                Console.WriteLine("--------------------------------");
+                Console.WriteLine("digite ENTER para continuar...");
+                Console.ReadLine();
+
+                tentativa--;
+
+                continue;
+            }
+
+            if (contadorNumerosDigitados < numerosDigitados.Length)
+            {
+                numerosDigitados[contadorNumerosDigitados] = numeroDigitado;
+
+                contadorNumerosDigitados++;
+            }
+
+            if (numeroDigitado == numeroAleatorio)
+            {
+                Console.WriteLine("------------------------------------");
+                Console.WriteLine("Parabéns, você acertou!");
+                Console.WriteLine("------------------------------------");
+
+                break;
+            }
+            else if (numeroDigitado > numeroAleatorio)
+            {
+                Console.WriteLine("------------------------------------");
+                Console.WriteLine("O número digitado foi maior que o número secreto!");
+                Console.WriteLine("------------------------------------");
+            }
+            else
+            {
+                Console.WriteLine("------------------------------------");
+                Console.WriteLine("O número digitado foi menor que o número secreto!");
+                Console.WriteLine("------------------------------------");
+            }
+
+            int diferencaNumerica = Math.Abs(numeroAleatorio - numeroDigitado);
+
+            if (diferencaNumerica >= 10)
+            {
+                pontuacao -= 100;
+            }
+            else if (diferencaNumerica >= 5)
+            {
+                pontuacao -= 50;
+            }
+            else
+            {
+                pontuacao -= 20;
+            }
+
+            Console.WriteLine("Sua pontuação é: " + pontuacao);
+            Console.WriteLine("------------------------------------");
+            Console.Write("Digite ENTER para continuar...");
             Console.ReadLine();
 
 
@@ -131,5 +214,3 @@ class Program
         return true;
     }
 }
-// opção de sair/voltar
-
