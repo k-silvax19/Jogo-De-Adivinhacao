@@ -7,5 +7,3 @@ string? chute = Console.ReadLine();
 
 
 Console.ReadLine();
-
-
