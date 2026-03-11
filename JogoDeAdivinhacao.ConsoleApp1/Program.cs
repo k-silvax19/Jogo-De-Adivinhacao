@@ -1,9 +1,112 @@
-﻿Console.WriteLine("-----------------------------------");
-Console.WriteLine("Jogo De Adivinhacao");
-Console.WriteLine("-----------------------------------");
+﻿using System;
+using System.Reflection.Metadata;
+using System.Reflection.Metadata.Ecma335;
+using System.Security.Cryptography;
 
-Console.Write("Digite Um Numero De 1 - 10: ");
-string? chute = Console.ReadLine();
+class Program
+{
+    static void Main(string[] args)
+    {
+        while (true)
+        {
+            // menu
+            string? dificuldadeEscolhida = ExibirMenuEscolhaDificuldade();
+
+            //configurção
+            int[] configuracoes = ConfigurarPartida(dificuldadeEscolhida);
+
+            int numeroMaximo = configuracoes[0];
+            int tentativasMaximas = configuracoes[1];
+
+            //exec do jogo
+            ExcutarPartida(numeroMaximo, tentativasMaximas);
+
+            //Continuar
+            if (!JogadorDesejaContinuar())
+                break;
+        }
+
+    }
+
+    static string? ExibirMenuEscolhaDificuldade()
+    {
+        Console.Clear();
+
+        Console.WriteLine("-----------------------------------");
+        Console.WriteLine("Jogo De Adivinhação");
+        Console.WriteLine("-----------------------------------");
+        Console.WriteLine("Selecione Uma Dificuldade: ");
+        Console.WriteLine("-----------------------------------");
+        Console.WriteLine("1 - Facil");
+        Console.WriteLine("2 - Médio");
+        Console.WriteLine("3 - Dificil");
+        Console.WriteLine("-----------------------------------");
+
+        Console.Write("Digite a dificuldade: ");
+        string? dificuldade = Console.ReadLine();
+
+        return dificuldade;
+    }
+
+    static int[] ConfigurarPartida(string? dificuldadeEscolhida)
+    {
+        int numeroMaximo = 20;
+        int tentativasMaximas = 10;
+
+        switch (dificuldadeEscolhida)
+        {
+            case "1":
+                numeroMaximo = 20;
+                tentativasMaximas = 10;
+                break;
+
+            case "2":
+                numeroMaximo = 50;
+                tentativasMaximas = 5;
+                break;
+
+            case "3":
+                numeroMaximo = 100;
+                tentativasMaximas = 3;
+                break;
+
+            default:
+                Console.WriteLine("-------------------------------");
+                Console.WriteLine("selecione uma dificuldade valida");
+                Console.WriteLine("aperte ENTER para continuar...");
+                Console.ReadLine();
+                break;
+
+        }
+        int[] configuracoes = new int[2];
+
+        configuracoes[0] = numeroMaximo;
+        configuracoes[1] = tentativasMaximas;
+
+        return configuracoes;
+    }
+
+    static void ExcutarPartida(int numeroMaximo, int tentativasMaximas)
+    {
+        int[] numerosDigitados = new int[100];
+        int contadorNumerosDigitados = 0;
+        int pontuacao = 1000;
 
 
-Console.ReadLine();
+        // exec do jogo
+        int numeroAleatorio = RandomNumberGenerator.GetInt32(1, numeroMaximo + 1);
+
+        for (int tentativa = 1; tentativa <= tentativasMaximas; tentativa++)
+        {
+            Console.Clear();
+            Console.WriteLine("------------------------------------");
+            Console.WriteLine($"Tentativa {tentativa} de {tentativasMaximas}.");
+            Console.WriteLine("------------------------------------");
+
+            Console.Write($"Digite um número entre 1 e {numeroMaximo}: ");
+            string? chute = Console.ReadLine();
+
+
+            Console.ReadLine();
+
+
