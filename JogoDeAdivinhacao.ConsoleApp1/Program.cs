@@ -214,5 +214,3 @@ class Program
         return true;
     }
 }
-// opção de sair/voltar
-
