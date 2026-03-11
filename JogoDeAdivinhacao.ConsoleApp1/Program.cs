@@ -110,3 +110,26 @@ class Program
             Console.ReadLine();
 
 
+            if (tentativa == tentativasMaximas)
+            {
+                Console.WriteLine($"Você usou todas as suas tentativas! O número era {numeroAleatorio}.");
+                Console.WriteLine("------------------------------------");
+                break;
+            }
+        }
+    }
+
+
+    static bool JogadorDesejaContinuar()
+    {
+        Console.Write("Deseja continuar? (s/N): ");
+        string? opcaoContinuar = Console.ReadLine();
+
+        if (opcaoContinuar?.ToUpper() != "S")
+            return false;
+
+        return true;
+    }
+}
+// opção de sair/voltar
+
